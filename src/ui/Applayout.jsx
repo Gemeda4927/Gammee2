@@ -8,6 +8,10 @@ const Container = styled.div`
   grid-template-columns: 26rem 1fr; 
   grid-template-rows: auto 1fr;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stack for smaller screens */
+  }
 `;
 
 const Main = styled.main`
@@ -16,7 +20,7 @@ const Main = styled.main`
   overflow: scroll;
 `;
 
-const Max = styled.div`  /* Corrected 'dev' to 'div' */
+const Max = styled.div`
   max-width: 120rem;
   margin: 0 auto;
   display: flex;
@@ -24,7 +28,7 @@ const Max = styled.div`  /* Corrected 'dev' to 'div' */
   gap: 3.2rem;
 `;
 
-function AppLayout() {  /* Corrected 'Applayout' to 'AppLayout' */
+function AppLayout() {
   return (
     <Container>
       <Header />
